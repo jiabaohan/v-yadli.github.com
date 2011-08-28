@@ -20,6 +20,24 @@
 <li>
 VimwikiAll2HTML 生成html文件
 
+<li>
+在vimrc中加入如下几行：
+<pre>
+    nmap &lt;C-F5&gt; :VimwikiAll2HTML&lt;enter&gt;
+    imap &lt;C-F5&gt; &lt;esc&gt;:VimwikiAll2HTML&lt;enter&gt;i
+</pre>
+    即可使用Ctrl+F5来自动生成所有的HTML文件。
+
+<li>
+再来一把：
+<pre>
+    imap &lt;C-enter&gt; (前括号，防吞)br&gt;&lt;enter&gt;
+</pre>
+    即可在插入模式使用&lt;Ctrl+Enter&gt;插入一个回车符号（不是很明白，为什么官方包不直接做一个这个功能。难道有冲突？）
+
+<li>
+\w\w 写新日记（赞！！！）
+
 </ul>
 
 </body>
