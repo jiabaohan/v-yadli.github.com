@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>Effeciency Of Trinity</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+
+<h1 id="toc_1">Effeciency Of Trinity</h1>
+
+<ul>
+<li>
+Confirmed:不是ProcessdMessageStorage的问题。
+
+<li>
+Confirmed:不是Cell装载的问题。直接把Cell_Implementation放到系统里硬链接没有带来效率提升。
+
+<li>
+Confirmed:不是Cell计算后Message交换存储的问题。（直接存回去效率也没有提升）
+
+<li>
+Breakthrough:切换到Parallel.Foreach之后，2M Node的图，迭代一轮只要7秒！只要7秒！
+
+</ul>
+
+</body>
+</html>
