@@ -28,5 +28,14 @@ Breakthouggh:切换到Parallel.Foreach之后，Push速度大大提高！
 
 </ul>
 
+
+<p>
+关于Trinity效率的问题：
+不能太相信Actionscript，即使Actionscript完全错误，整个系统也应该能够很“健康”地运行<br>
+计划在每个SubSyncStep执行之前，检查所有的Message是否到达，如果没有到达，是否已经加入PrefetchList<br>
+如果还没有加入PrefetchList的话，那么是Actionscript出了问题，否则的话，就是系统效率出问题了，整个方案可能不Work，或者应该提高网络层的效率<br>
+那么如果是PrefetchList的问题的话，也应该有补救的措施——在SubSyncStep之前，就应该通知CacheManager，说下面一批Node即将被处理，立即检查PrefetchList，没有加入的赶紧加入。<br>
+</p>
+
 </body>
 </html>
