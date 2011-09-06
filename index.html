@@ -58,7 +58,21 @@ Low level support in KV-Store
 <li class="done0">
 A CellTransformer implementation
 
+<ul>
+<li class="done0">
+Metadata description file for converting raw data into computation cell
+
 </ul>
+</ul>
+<li class="done0">
+It takes too much time to put the cell back after computation. Write a function to only hack the memory chunk, not copy the whole thing back.
+
+<li class="done0">
+onBulkMessageRequest, lock too high
+
+<li class="done0">
+
+
 <li class="done4">
 Global Iteration count
 
@@ -77,7 +91,7 @@ Make BaseCell a real class, not an abstract one, so that it can process the basi
 <li class="done0">
 Refactor inlinks into a property, write the metadata framework to guide the BaseCell.
 
-<li class="done0">
+<li class="done4">
 Add a generator as Cell factory, replacing the low-efficiency Reflector module
 
 </ul>
