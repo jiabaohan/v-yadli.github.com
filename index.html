@@ -8,7 +8,7 @@
 <body>
 
 
-<h1 id="toc_1">亚刀的博客</h1>
+<h1 id="toc_1">From Academy to Zenity -- 亚刀的博客</h1>
 
 <h2 id="toc_1.1">etc</h2>
 
@@ -39,27 +39,35 @@ Pair Work的Blog啊！
 组里面的活，更新了
 
 <ul>
-<li class="done0">
+<li class="done1">
 Aggregation f,F support
 
+<ul>
+<li class="done4">
+Buffer exchange protocol
+
+<li class="done0">
+Aggregation class definition, parse it in AutoWrapper
+
+</ul>
 <li class="done4">
 Halt Condition
 
 <li class="done0">
 Global const support for cells
 
-<li class="done2">
+<li class="done4">
 Initialization of cells. (The raw format will be just 8-Byte INT64 links)
 
 <ul>
 <li class="done4">
 Low level support in KV-Store
 
-<li class="done0">
+<li class="done4">
 A CellTransformer implementation
 
 <ul>
-<li class="done0">
+<li class="done4">
 Metadata description file for converting raw data into computation cell
 
 </ul>
@@ -67,11 +75,8 @@ Metadata description file for converting raw data into computation cell
 <li class="done0">
 It takes too much time to put the cell back after computation. Write a function to only hack the memory chunk, not copy the whole thing back.
 
-<li class="done0">
+<li class="done4">
 onBulkMessageRequest, lock too high
-
-<li class="done0">
-
 
 <li class="done4">
 Global Iteration count
@@ -88,14 +93,28 @@ Refactor Actionscript configuration into a single file.
 <li class="done4">
 Make BaseCell a real class, not an abstract one, so that it can process the basic binary cell format.
 
-<li class="done0">
-Refactor inlinks into a property, write the metadata framework to guide the BaseCell.
+<li class="done4">
+Write the metadata framework to guide the BaseCell.(Thanks Bin!)
 
 <li class="done4">
 Add a generator as Cell factory, replacing the low-efficiency Reflector module
 
+<li class="done0">
+Add a generator to generate scripts based on Trinity.xml and a command file.
+
+<li class="done0">
+Add an evaluation routine that monitors the prefetch buffer reuse ratio in between execution windows.
+
+<li class="done0">
+Add an evaluation routine that monitors the time slices for different tasks (Exec,Disk,Prefetch,Drop)
+
+<ul>
+<li class="done0">
+Which can lead to the concept of Trinity-Performance-Monitor layer.
+
 </ul>
-<li class="done4">
+</ul>
+<li class="done2">
 软件工程Team Project
 
 <ul>
@@ -128,18 +147,7 @@ Alpha release
 <h2 id="toc_1.4">var</h2>
 
 <p>
-以后，写的所有的“有用”的程序，都要放到网上。否则的话，一个不留神，重装系统，就完蛋了。
-我做出了一个决定——利用业余时间，学习数据库相关的东西——历史，现状，未来。这对我将来的发展很重要。
-不能老是陷在一个项目上，否则的话，眼界越来越窄。每天能想到的东西，除了和项目相关，就别无他物了。
-要跳出这个圈子，站在更高的层次上来看这个问题。
-</p>
-
-<p>
-对，一定要不断充实自己。
-</p>
-
-<p>
-Visual Studio的Profiling功能真好，Saved my day!
+Franz Ferdinand 貌似很照
 </p>
 
 </body>
