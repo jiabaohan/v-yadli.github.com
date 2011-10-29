@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../style.css">
+<title>2011-10-27</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+
+<h1 id="toc_1">2011-10-27</h1>
+
+<p>
+今天开始学习F#!~<br>
+请看下面这段代码<br>
+</p>
+
+<pre>
+type Expr =
+  | Num of int
+  | Add of Expr * Expr
+  | Mul of Expr * Expr
+  | Var of string
+
+let rec Evaluate (env:Map&lt;string,int&gt;) exp =
+    match exp with
+    | Num n -&gt; n
+    | Add (x,y) -&gt; Evaluate env x + Evaluate env y
+    | Mul (x,y) -&gt; Evaluate env x * Evaluate env y
+    | Var id    -&gt; env.[id]
+</pre>
+
+<p>
+看到了吗，一个文法规则外加解释器。。。<br>
+瞬间明白了一些这种函数式递归编程的无限强力啊……<br>
+</p>
+
+</body>
+</html>
