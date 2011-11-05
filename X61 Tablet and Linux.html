@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>X61 Tablet and Linux</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+
+<h1 id="toc_1">X61 Tablet and Linux</h1>
+
+<p>
+终于还是在X61T上安装了费多多16（喂喂，这是什么名字！！感觉好费啊！）<br>
+初始状态：所有硬件正常工作，手触未校正<br>
+校正方法：<br>
+第一个工具叫XWacomSet，用这个工具（系统已经自带）可以设置触摸屏幕到物理LCD的坐标映射。<br>
+第二个，xinput_calibrator。这个比较非主流，需要在<a href="http://www.thinkwiki.org/wiki/Installing_Ubuntu_10.04_%28Lucid_Lynx%29_on_a_ThinkPad_X61_Tablet">http://www.thinkwiki.org/wiki/Installing_Ubuntu_10.04_%28Lucid_Lynx%29_on_a_ThinkPad_X61_Tablet</a> 获得。
+编译后得到一个可执行文件，然后你都懂了，但是注意！！在捕获数据之前，需要确认屏幕被设置回了未校准状态（0 0 1024 1024）！xinput_calibrator不是从原始数据获得坐标的！<br>
+如果需要自动校准的话，自己把东西扔到/etc/X11/xinit/xinitrc-common里面去吧。。。<br>
+<br>
+完毕。<br>
+</p>
+
+</body>
+</html>
