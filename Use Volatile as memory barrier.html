@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>Use Volatile as memory barrier</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+
+<h1 id="toc_1">Use Volatile as memory barrier</h1>
+
+<p>
+啊～今天又学到了一个小姿势～<br>
+</p>
+<pre>
+Compiler Reordering
+
+Compiler rearrangement is dealt with in this particular case by our use of volatile.
+The C++ standard defines that reads of volatile variables cannot be cached nor
+delayed at writing. It also defines that volatile reads or writes cannot be moved
+past each other.
+
+To quote hax_:
+
+
+"'volatile' variable access is also code rearrangement barrier: no lines can be
+moved up or down through it (you can treat every access to volatile variable as
+horizontal barrier in code editor)".
+
+Normally this wouldn't be enough for multi-threading programming since the compiler
+can reorder non-volatile read/write relative to volatile read/write. But for this
+circular queue it's all read/write of volatile. Either the indexes themselves are
+read or written or the array is accessed with a volatile. Thus, this type of queue
+is safe from compiler reordering that could break First.
+
+</pre>
+
+</body>
+</html>
