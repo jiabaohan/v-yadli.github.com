@@ -18,105 +18,58 @@ v-yadli[at]microsoft.com(推荐使用，使用这个帐号可以随时联系到�
 抱歉，前端技术不到家，不知道怎么做及时留言。。请给我发邮件吧！
 </p>
 
+<h2 id="toc_1.1">PKB</h2>
+
 <p>
-新栏目！Photos!
+<a href="Graph databases.html">Graph databases</a>
+<a href="C Libraries.html">C Libraries</a>
 </p>
 
-<h2 id="toc_1.1">todo</h2>
+<h2 id="toc_1.2">todo</h2>
 
 <ul>
-<li class="done2">
+<li class="done0">
+嘛，Paypal帐号被锁了，星期一打电话去问问。
+
+<li class="done4">
 健身卡与蛋白粉。我不想虚逼而死。。。
 
 <ul>
 <li class="done4">
 蛋白粉已经搞到了
 
-<li class="done0">
-百代健身关门大吉，所以要重新选地方
+<li class="done4">
+百代健身关门大吉，所以要重新选地方 ——选了一个叫神马的地方啊……
 
 </ul>
-<li class="done0">
+<li class="done4">
 托福报名，要开始了呀少年。
 
-<li class="done3">
-组里面的活，更新了
+<ul>
+<li class="done4">
+每天听写，妥妥的～
+
+<li class="done4">
+限一个月之内把单词书给搞了
+
+</ul>
+<li class="done0">
+二月
 
 <ul>
 <li class="done0">
-Implement a new MemoryTrunk
+Graph generator paper for VLDB industrial track
 
 <li class="done0">
-Analyse Luke's code
+Where the six degree principle will take you...
 
-<li class="done4">
-Extra interface &amp; utilities for SSSP (BFS)
-
-<li class="done4">
-Do experiments with SSSP.
-
-<li class="done4">
-Test pure unmanaged C TCP performance on Infiniband (Not too good)
-
-<li class="done4">
-Test disk time &amp;&amp; disk queue length during the computation task.
-
-<li class="done4">
-Stablize the new GUI control center of Trinity.
-
-<li class="done4">
-Revise the user script part.
+<li class="done0">
+TechFest? I guess yes.
 
 </ul>
-<li class="done3">
-软件工程Team Project
-
-<ul>
-<li class="done4">
-Initial Roadmap
-
-<li class="done4">
-First Week Planning
-
-<li class="done4">
-Coding phase
-
-<li class="done4">
-Alpha release
-
-<<<<<<< HEAD
-<li class="done4">
-Beta feature discuss
-=======
-<li class="done0">
-Beta feature discuss
-
-<li class="done0">
-Code review
->>>>>>> 708fb314db7c35817be00aef90795035a33ec3b5
-
-<li class="done4">
-Code review
-
-<li class="done0">
-Beta Coding phase
-
-<li class="done0">
-Beta testing
-
-<li class="done0">
-Beta release
-
-</ul>
-<li class="done0">
-修好你的铁三角，teme...
-
-<li class="done0">
-好像Koss PP也坏了，最近是不是忌大音量听音乐（好像这件事跟时间是没有关系的吧！）
-
 </ul>
 
-<h2 id="toc_1.2">home</h2>
+<h2 id="toc_1.3">home</h2>
 
 <p>
 <a href="View.html">观点</a><br>
@@ -125,31 +78,20 @@ Beta release
 <a href="diary/diary.html">日记本，又名流水帐</a><br>
 <a href="Favourites.html">收藏夹</a><br>
 <a href="Archive.html">归档</a><br>
-<a href="Photos.html">Photos</a>
+<a href="Photos.html">Photos</a><br>
 </p>
 
-
-<h2 id="toc_1.3">var</h2>
-
-<p>
-温馨小提示——不要打着要做一个科学家的旗号进行伪科学装逼等邪恶事宜。<br>
-</p>
+<h2 id="toc_1.4">var</h2>
 
 <p>
-Paper交出去了，那么要开始进行新一轮迭代了对吧～提起精神来，还有很多没有做的事情。<br>
-话说，什么时候你也去报名一下托福吧，贴灭～<br>
-</p>
-
-
-<p>
-2011-10-15
-与豆逼在北京自由呼吸，特此纪念。
-</p>
-
-<p>
-即使是写一堆FIXED，也是因为怀念例如"*( sptr + *aptr++ ) = *bptr++;"这样的代码啊！<br>
-数据可视化果然能调动直觉。<br>
-似乎要移植回C了？我是应该高兴呢？还是高兴呢？还是高兴呢？哈哈哈哈！！！<br>
+嘛，这memcpy的学问真是无穷无尽。再给我10年都学不完哪。话说现在的先进型架构是不是要逆天，无视对齐惩罚。<br>
+<a href="http://movie.douban.com/subject/1394342/">http://movie.douban.com/subject/1394342/</a> <br>
+<<<<<<< HEAD
+<a href="http://t.cn/zO7AY96">http://t.cn/zO7AY96</a> 有关莫扎特之死，有空看<br>
+<a href="http://www.oschina.net/news/25423/color-scheme-generators">http://www.oschina.net/news/25423/color-scheme-generators</a> 色彩生成器<br>
+=======
+<a href="http://t.cn/zO7AY96">http://t.cn/zO7AY96</a> 有关莫扎特之死，有空看
+>>>>>>> f3b69f8ce49ee54a6cdff4df675db536026fc7bc
 </p>
 
 </body>
