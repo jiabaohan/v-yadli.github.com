@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../style.css">
+<title>2012-02-16</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+
+<h1 id="toc_1">2012-02-16</h1>
+
+<p>
+如何在Arm机器上编译Node:<br>
+configure make make install（废话……）<br>
+但是却遇到一些问题，例如"Failed {#2} pure virtual function called"。<br>
+<a href="https://github.com/joyent/node/issues/883">解决方案在此</a><br>
+大意是说，在Arm上编译的时候因为GCC一般都有问题，所以一定要设置好LIBRARY_FLAGS.gcc.arch-arm {
+</p>
+<blockquote>
+'CCFLAGS':['-fno-tree-sink']
+}
+</blockquote>
+<p>
+另，
+./configure的时候记得加上--dest-cpu=arm
+</p>
+
+</body>
+</html>
