@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>Avalon from console</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+
+<h1 id="toc_1">Avalon from console</h1>
+
+<p>
+我的解决方案：<br>
+</p>
+
+<ul>
+<li>
+在Console程序里开一个WinForm。记得加好各种Reference(如System.Windows等等)
+
+<li>
+在WinForm里面开一个ElementHost，加入WindowsFormIntegration的Reference
+
+<li>
+（！！注意！！）手动给ElementHost加入WPF控件，此步无法自动进行，designer持续报错，无解。
+
+<li>
+（！！注意！！）启动的时候，使用下面这段代码：
+
+</ul>
+
+<pre>
+    Thread thread = new Thread(
+            () =&gt;
+            {
+            GraphExplorer explorer = new GraphExplorer();
+            explorer.ShowDialog();
+            } );
+    thread.SetApartmentState( ApartmentState.STA );//important, WPF only runs in STA environment!
+    thread.Start();
+</pre>
+
+<p>
+由于Avalon只能在STA环境中运行，所以只好单独给它开一个显式的Thread<br>
+如此，Avalon就起飞了。<br>
+</p>
+
+</body>
+</html>
