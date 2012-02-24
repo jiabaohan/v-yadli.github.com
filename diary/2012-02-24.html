@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../style.css">
+<title>2012-02-24</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+
+<h1 id="toc_1">2012-02-24</h1>
+
+<p>
+老子又想骂人了……微软的MS-MPI真TMD难用。<br>
+我们在部署PBGL-BFS实验的时候遇到一个问题，尼玛跨机器运行的时候，MPI硬是不走40G网络，跑去走1G的。<br>
+到网上查资料，说，啊～设置一下CCP_MPI_NETMASK就可以了。<br>
+然后我就去设，诶，不行。然后号称需要使用cluscfg，被告知需要HeadNode来管理，HeadNode呢，又是商业版的东西，我们又没有。。。<br>
+然后找了JB好半天，终于找到，原来，在命令行下，那个参数被叫做MPICH_NETMASK。。。<br>
+你坑你爹也不是这样坑的吧！！凭神马两个名字不能做得一样啊！！！<br>
+有病啊！！！<br>
+有病啊！！！<br>
+有病啊！！！<br>
+</p>
+
+
+<p>
+<a href="http://64.4.10.145/en-us/library/dd420457(v=ws.10).aspx|">如何配置MS-MPI使得它使用指定的网络接口</a>
+</p>
+
+</body>
+</html>
