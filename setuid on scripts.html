@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>setuid on scripts</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+
+<h1 id="toc_1">setuid on scripts</h1>
+
+<p>
+今天跟王老斯扯淡，他说及时给bash script加上 chmod +s，仍然不能以root权限执行。<br>
+一查资料发现，原来是系统不允许在shell脚本上设置s位。<br>
+那么，我们来玩点阴的吧……用C写个壳子套住，然后执行……<br>
+</p>
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;string.h&gt;
+
+int main(int argc, char ** argv)
+{
+    char argument[1024];
+    strcpy(argument,"");
+    int i;
+    for(i=1;i&lt;argc;++i)
+    {
+        strcat(argument,argv[i]);
+        strcat(argument," ");
+    }
+    printf("argument = %s\n",argument);
+    pid_t pid;
+    if(-1 == (pid = fork()))
+    {
+        perror("fork");
+    }else if (!pid)
+    {
+        setuid(0);//I'm the root!!!
+        printf("child, uid = %d, euid = %d\n",getuid(),geteuid());
+        system(argument);
+        exit(-1);
+    }else
+    {
+        printf("parent, uid = %d, euid = %d\n",getuid(),geteuid());
+        if(pid != waitpid(pid,NULL,0))
+        {
+            perror("waitpid");
+        }
+        exit(0);
+    }
+    return 0;
+}
+</pre>
+<p>
+顺便复习了一下早年在APUE一书中习得的技能——fork系列。不过在使用exec系列的时候却
+总是失败，不知道为什么。<br>
+</p>
+
+</body>
+</html>
