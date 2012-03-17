@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>LaTeX</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+
+<h1 id="toc_1">LaTeX</h1>
+
+<p>
+LaTeX 中的文章结构是这样的：
+</p>
+
+<p>
+先要定义 \documentclass{<em>someDocumentClass</em>},自带的例如article, report, slides.
+这将指定整个文章将套用的格式。<a href="DocumentClass.html">我用过的DocumentClass</a><br>
+</p>
+
+<p>
+然后如果要用一些包，比如中文支持，比如图片，紧接着使用\userpackage{<em>somePackages</em>}。<a href="Common LaTeX packages.html">我用过的包</a>
+</p>
+
+<p>
+接下来，文档就开始了。使用
+\begin{document}来标记。(整个文章结束后需要使用\end{document})
+</p>
+
+<p>
+然后定义一个\title{<em>YourTitleHere</em>}，指定文章标题。<br />
+</p>
+
+<p>
+然后\author{...}指定作者。VLDB的这个模板还需要指定作者数量（使用\numberofauthors{}<br />
+Author格式:<br />
+</p>
+<pre>
+\alignauthor
+G.K.M. Tobin\titlenote{The secretary disavows
+any knowledge of this author's actions.}\\
+       \affaddr{Institute for Clarity in Documentation}\\
+       \affaddr{P.O. Box 1212}\\
+       \affaddr{Dublin, Ohio 43017-6221}\\
+       \email{webmaster@marysville-ohio.com
+</pre>
+<p>
+把所有的作者一条一条加进\author即可。<br />
+</p>
+
+<p>
+一切准备就绪，来一把\maketitle生成标题吧。
+<br />
+</p>
+
+<pre>
+\begin{abstract}
+来点抽象的吧少年
+\end{abstract}
+</pre>
+
+<p>
+然后就开始\section{<em>XXX</em>} \subsection{<em>XXXX</em>}
+</p>
+
+</body>
+</html>
