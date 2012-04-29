@@ -15,8 +15,28 @@
 联系方式：<br>
 glocklee[at]gmail.com<br>
 v-yadli[at]microsoft.com(推荐使用，使用这个帐号可以随时联系到我)<br>
-抱歉，前端技术不到家，不知道怎么做及时留言。。请给我发邮件吧！
+抱歉，前端技术不到家，不知道怎么做及时留言。。请给我发邮件吧！<br />
 </p>
+
+<p>
+It's been a long time... Now I'm back again.<br />
+好多事情需要处理。<br />
+</p>
+
+<ol>
+<li>
+Online Application for Student Visa / Entry Permit <a href="https://w5.ab.ust.hk/cgi-bin/std_nem_cgi.sh/WService=broker_af_p/prg/af_vs_appl_main.r">https://w5.ab.ust.hk/cgi-bin/std_nem_cgi.sh/WService=broker_af_p/prg/af_vs_appl_main.r</a>
+
+<li>
+毕业设计
+
+<li>
+SKS
+
+<li>
+Graph generator
+
+</ol>
 
 <p>
 新栏目～<br />
@@ -44,14 +64,14 @@ v-yadli[at]microsoft.com(推荐使用，使用这个帐号可以随时联系到�
 Trinity release preperation
 
 <ul>
-<li class="done1">
+<li class="done2">
 更健壮的系统
 
 <ul>
 <li class="done0">
 Blackboard心跳包
 
-<li class="done0">
+<li class="done4">
 Service心跳包，daemon
 
 <li class="done4">
@@ -113,6 +133,39 @@ Graph generator
 
 <h2 id="toc_1.4">var</h2>
 
+<pre>
+    两个想法：
+    1.关于MTHash——如果没有Resize，所有线程用竞技场分配新空间，是不是就无锁了？
+        一个细节——来了一个ID要Map到Entry的时候，不要一个一个地迭代多个子表，
+        而是交替迭代，这样就能保证不会遍历完任意一个子表就能找到结果。
+    2.关于SpinLock:
+        考虑下面这种实现：
+        struct SpinLock{
+            unsigned CurrentTurn;
+            unsigned ArrangedTurn;
+        }
+
+        void GetLock(SpinLock* lock)
+        {
+            unsigned myTurn = InterlockedIncrement(&amp;lock-&gt;ArrangedTurn);
+            while(*&amp;lock-&gt;CurrentTurn != myTurn)
+                __mm_pause();
+        }
+
+        void UnLock(SpinLock* lock)
+        {
+            ++lock-&gt;CurrentTurn;
+        }
+</pre>
+
+<p>
+<a href="http://www.bottomupcs.com/small_to_big_systems.html">Acquire,Release,X86</a>
+<a href="http://locklessinc.com/articles/locks/">各种Spinlock和RWLock</a>
+<a href="http://en.wikipedia.org/wiki/Read-copy-update">RCU</a>
+<a href="http://stackoverflow.com/questions/2538070/atomic-operation-cost">Atomic operation cost</a>
+<a href="http://tirania.org/blog/">貌似是一个Mono核心成员的博客，我好几次误打误撞进去</a>
+</p>
+
 <p>
 --看书吧少年<br />
 追风筝的人 <br>
@@ -121,9 +174,19 @@ The hunger games<br>
 简明哲学导论<br>
 </p>
 
+<pre>
+键盘映射：
+Esc-&gt;Esc
+Capslock-&gt;Esc
+ScrollLock-&gt;Capslock
+REGEDIT4
+[HKEY_CURRENT_USER\Keyboard Layout]
+"Scancode Map"=hex:00,00,00,00,00,00,00,00,03,00,00,00,3a,00,46,00,01,00,3a,00,00,00,00,00
+</pre>
 
 <p>
-<a href="http://bbs.gfan.com/android-2876363-1-1.html">一大堆基带</a>
+<a href="http://www.di.fm/">怎么貌似我小时候知道这个网站？</a><br />
+<a href="http://bbs.gfan.com/android-2876363-1-1.html">一大堆基带</a><br />
 <a href="http://www.bluebytesoftware.com/blog/2008/06/13/VolatileReadsAndWritesAndTimeliness.aspx">http://www.bluebytesoftware.com/blog/2008/06/13/VolatileReadsAndWritesAndTimeliness.aspx</a> <br>
 如何在万恶的windows上使用echo，使用\r\n做回车：<br>
 echo -e "line1\r\nline2"<br>
