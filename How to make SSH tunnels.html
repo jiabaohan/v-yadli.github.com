@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>How to make SSH tunnels</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+<h1 id="toc_1">如何打洞</h1>
+
+<p>
+反向隧道：连接目标机器端口映射到本机 ssh -nNT -R 10086:localhost:3389 adas@10.86.170.112
+正向隧道：连接本机端口映射到目标机器 ssh -nNT 10086:localhost:3389 adas@10.86.170.112
+</p>
+
+</body>
+</html>
