@@ -1,50 +1,32 @@
     <html>
     <head>
         <link rel="Stylesheet" type="text/css" href="style.css" />
-        <title>VimWiki shortcuts</title>
+        <title>Markers</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     </head>
     <body>
         <div class="content">
         
+<h1 id="toc_1">Markers</h1>
 
-<h1 id="toc_1">VimWiki shortcuts</h1>
+<p>
+先吐槽一下：一直懒得用Marker功能，直到谢老板教会我在Vimperator中使用marker跳转页面。。。<br/>
+终于意识到这个玩意的必要性了。<br />
+</p>
 
-<ul>
-<li>
-\ww 跳转到Index
+<p>
+m[a-zA-Z0-9] 打标签
+'[a-zA-Z0-9] 跳转到标签
+顺便说下在Vimperator中是M打标签，go[a-zA-Z0-9]跳转
+</p>
 
-<li>
-\ws 选择Wiki档（目前我就一个，不是太需要这个）
+<h2 id="toc_1.1">注意</h2>
 
-<li>
-VimwikiAll2HTML 生成html文件
-
-<li>
-在vimrc中加入如下几行：
-<pre>
-    nmap &lt;C-F5&gt; :VimwikiAll2HTML&lt;enter&gt;
-    imap &lt;C-F5&gt; &lt;esc&gt;:VimwikiAll2HTML&lt;enter&gt;i
-</pre>
-    即可使用Ctrl+F5来自动生成所有的HTML文件。
-
-<li>
-再来一把：
-<pre>
-    imap &lt;C-enter&gt; (前括号，防吞)br&gt;&lt;enter&gt;
-</pre>
-    即可在插入模式使用&lt;Ctrl+Enter&gt;插入一个回车符号（官方的回车是shift-Enter）
-
-<li>
-\w\w 写新日记（赞！！！）
-
-<li>
-其实，shift+enter就是br。。。
-
-<li>
-:VimwikiSearch search_pattern之后，使用:lopen列出所有Candidates
-
-</ul>
+<p>
+小写字母标签为当前Buffer中的局部标签；
+大写字母标签为跨Buffer标签。
+另外'亦可作为动词的度量，例如d'"一般来说就删得比较干净了。
+</p>
 
         </div>
         <div id="disqus_thread"></div>

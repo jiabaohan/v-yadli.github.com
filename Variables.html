@@ -1,50 +1,50 @@
     <html>
     <head>
         <link rel="Stylesheet" type="text/css" href="style.css" />
-        <title>VimWiki shortcuts</title>
+        <title>Variables</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     </head>
     <body>
         <div class="content">
         
+<h1 id="toc_1">Variables</h1>
 
-<h1 id="toc_1">VimWiki shortcuts</h1>
+<h2 id="toc_1.1">Introduction</h2>
 
-<ul>
+<p>
+变量与寄存器不同。<br />
+在Ex模式，或VimL中，直接使用<br />
+let var_name=value 来保存值到变量。<br />
+变量的内容可以是：<br />
+</p>
+<ol>
 <li>
-\ww 跳转到Index
-
-<li>
-\ws 选择Wiki档（目前我就一个，不是太需要这个）
-
-<li>
-VimwikiAll2HTML 生成html文件
-
-<li>
-在vimrc中加入如下几行：
-<pre>
-    nmap &lt;C-F5&gt; :VimwikiAll2HTML&lt;enter&gt;
-    imap &lt;C-F5&gt; &lt;esc&gt;:VimwikiAll2HTML&lt;enter&gt;i
-</pre>
-    即可使用Ctrl+F5来自动生成所有的HTML文件。
+数字 -- let a=1
 
 <li>
-再来一把：
-<pre>
-    imap &lt;C-enter&gt; (前括号，防吞)br&gt;&lt;enter&gt;
-</pre>
-    即可在插入模式使用&lt;Ctrl+Enter&gt;插入一个回车符号（官方的回车是shift-Enter）
+字符串 -- let b='hello'
 
 <li>
-\w\w 写新日记（赞！！！）
+数组(学名叫List） -- let c=[1,2,'3']
 
 <li>
-其实，shift+enter就是br。。。
+字典 -- let d={ 'hello':'world', 'Yadli' : 'Katana'}。使用[]访问，例如 echo d['hello']
 
-<li>
-:VimwikiSearch search_pattern之后，使用:lopen列出所有Candidates
+</ol>
 
-</ul>
+<p>
+将变量输出到Buffer：pu=var_name，注意'='表示"Expression"。详见:help pu<br />
+此外，形如@[a-zA-Z0-9!@#($"]（符号是我乱打的。。。不要参考！）的表达式将引用
+寄存器的值。
+</p>
+
+<h2 id="toc_1.2">Scope</h2>
+
+<p>
+形如l:var_name的是局部变量。在当前Buffer有效。<br />
+形如s:var_name的是Script变量，在当前VimL Script中有效。<br />
+形如g:var_name的是全局变量，你懂的。<br />
+</p>
 
         </div>
         <div id="disqus_thread"></div>
