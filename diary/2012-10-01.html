@@ -1,38 +1,23 @@
     <html>
     <head>
         <link rel="Stylesheet" type="text/css" href="../style.css" />
-        <title>2011-10-27</title>
+        <title>2012-10-01</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     </head>
     <body>
         <div class="content">
         
-
-<h1 id="toc_1">2011-10-27</h1>
-
-<p>
-今天开始学习F#!~<br>
-请看下面这段代码<br>
-</p>
-
-<pre>
-type Expr =
-  | Num of int
-  | Add of Expr + Expr
-  | Mul of Expr * Expr
-  | Var of string
-
-let rec Evaluate (env:Map&lt;string,int&gt;) exp =
-    match exp with
-    | Num n -&gt; n
-    | Add (x,y) -&gt; Evaluate env x + Evaluate env y
-    | Mul (x,y) -&gt; Evaluate env x * Evaluate env y
-    | Var id    -&gt; env.[id]
-</pre>
+<h1 id="toc_1">2012-10-01</h1>
 
 <p>
-看到了吗，一个文法规则外加解释器。。。<br>
-瞬间明白了一些这种函数式递归编程的无限强力啊……<br>
+我觉得昨天意识到了科班出生和泥腿子乐手的决定性差距。
+表达能力，逻辑，词汇量，一致性，技巧（当然这些是指
+音乐方面。）都差至少一个档次啊。最占起手的是技巧。
+就像用吉他写歌的同学们哪个没几个自己的无法解释但觉
+得好听的得意进行？但是光靠技巧还是不行啊。让你用音
+乐说一个＂但是＂并转入另一调，表达一些不同的东西再
+回来，这种事情能随心所欲吗？真是个难忘的国庆节啊。
+@陈炜杰
 </p>
 
         </div>
