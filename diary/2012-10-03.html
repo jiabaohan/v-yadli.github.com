@@ -1,38 +1,36 @@
     <html>
     <head>
         <link rel="Stylesheet" type="text/css" href="../style.css" />
-        <title>2011-10-27</title>
+        <title>2012-10-03</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     </head>
     <body>
         <div class="content">
         
-
-<h1 id="toc_1">2011-10-27</h1>
+<h1 id="toc_1">2012-10-03</h1>
 
 <p>
-今天开始学习F#!~<br>
-请看下面这段代码<br>
+转念一想，既然我已经有了live lite
+8（够用了），为什么执意要升级到提升不太多的intro呢？不如搞个reason
+essential，这样就只多花了20刀，有了两个软件，live lite
+功能受到限制的时候通过rewire呼叫reason进行支援，顺带还等于是买了一个record。多好啊。。。另外live虽然很强大但是我果然还是喜欢传统的daw。live看起来就像是给外星人用的一样。最后有钱了还可以升级到reason。 
 </p>
 
-<pre>
-type Expr =
-  | Num of int
-  | Add of Expr + Expr
-  | Mul of Expr * Expr
-  | Var of string
-
-let rec Evaluate (env:Map&lt;string,int&gt;) exp =
-    match exp with
-    | Num n -&gt; n
-    | Add (x,y) -&gt; Evaluate env x + Evaluate env y
-    | Mul (x,y) -&gt; Evaluate env x * Evaluate env y
-    | Var id    -&gt; env.[id]
-</pre>
 
 <p>
-看到了吗，一个文法规则外加解释器。。。<br>
-瞬间明白了一些这种函数式递归编程的无限强力啊……<br>
+昨天到深水po买了个音箱。人真多，腿都走断了。
+Golden computer
+archade分为G层和LG1，G层东西贵80块左右。我苦苦找了一下午，终于在LG1找到了一个G层的商品，节约了一包烟钱。
+今天4点把Musebox给构想出来了。
+</p>
+
+<p>
+插入一个昨天的日记真是太操蛋了。在diary.wiki里，由于Table在你加一个Cell之后是变宽而不是“挤”，
+所以要手动调整回4列。。。
+</p>
+
+<p>
+qa= 4f|ld$j0p0
 </p>
 
         </div>

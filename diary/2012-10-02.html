@@ -1,38 +1,22 @@
     <html>
     <head>
         <link rel="Stylesheet" type="text/css" href="../style.css" />
-        <title>2011-10-27</title>
+        <title>2012-10-02</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     </head>
     <body>
         <div class="content">
         
-
-<h1 id="toc_1">2011-10-27</h1>
-
-<p>
-今天开始学习F#!~<br>
-请看下面这段代码<br>
-</p>
-
-<pre>
-type Expr =
-  | Num of int
-  | Add of Expr + Expr
-  | Mul of Expr * Expr
-  | Var of string
-
-let rec Evaluate (env:Map&lt;string,int&gt;) exp =
-    match exp with
-    | Num n -&gt; n
-    | Add (x,y) -&gt; Evaluate env x + Evaluate env y
-    | Mul (x,y) -&gt; Evaluate env x * Evaluate env y
-    | Var id    -&gt; env.[id]
-</pre>
+<h1 id="toc_1">2012-10-02</h1>
 
 <p>
-看到了吗，一个文法规则外加解释器。。。<br>
-瞬间明白了一些这种函数式递归编程的无限强力啊……<br>
+时代真的不一样了。传统的基于PC的工具，单是一个Live(还是Intro!!)就要700多。反观iOS上的乐器们，
+绿色众加起来还不到那么多。另：以SampleTank为例外。这货的前身是个VST插件。。。黄色部分是几个重量级
+的工具，其中包括我最喜欢的KORG
+iMS-20和iKaossilator，但是加起来价格连买副耳机的钱都不到。试想把这些玩意的PC版统统买齐要花多少钱……
+总之这种状况就是很开心～拿到信用卡之后就开始慢慢买吧。用到一个买一个，反正我是奉行了H2O大神的"Try
+before buy"，心里已经有数了。 大笑
+(GarageBand虽然只是个玩具，但是念在它只售38港币，里面送一堆乱七八糟的功能，还是可以买一买的。) 
 </p>
 
         </div>

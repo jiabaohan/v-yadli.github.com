@@ -1,38 +1,23 @@
     <html>
     <head>
-        <link rel="Stylesheet" type="text/css" href="../style.css" />
-        <title>2011-10-27</title>
+        <link rel="Stylesheet" type="text/css" href="style.css" />
+        <title>Build a hackintosh 10.7</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     </head>
     <body>
         <div class="content">
         
-
-<h1 id="toc_1">2011-10-27</h1>
+<h1 id="toc_1">Build a hackintosh 10.7</h1>
 
 <p>
-今天开始学习F#!~<br>
-请看下面这段代码<br>
+<a href="http://www.360doc.com/content/12/0221/23/6141201_188499075.shtml">http://www.360doc.com/content/12/0221/23/6141201_188499075.shtml</a>
+一个靠谱的教程
+<br />
 </p>
 
-<pre>
-type Expr =
-  | Num of int
-  | Add of Expr + Expr
-  | Mul of Expr * Expr
-  | Var of string
-
-let rec Evaluate (env:Map&lt;string,int&gt;) exp =
-    match exp with
-    | Num n -&gt; n
-    | Add (x,y) -&gt; Evaluate env x + Evaluate env y
-    | Mul (x,y) -&gt; Evaluate env x * Evaluate env y
-    | Var id    -&gt; env.[id]
-</pre>
-
 <p>
-看到了吗，一个文法规则外加解释器。。。<br>
-瞬间明白了一些这种函数式递归编程的无限强力啊……<br>
+<a href="http://bbs.pcbeta.com/viewthread-1041361-1-1.html">http://bbs.pcbeta.com/viewthread-1041361-1-1.html</a>
+一个绝对靠谱的教程，里面有个完全包，包括了驱动等等。
 </p>
 
         </div>

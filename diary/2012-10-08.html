@@ -1,38 +1,18 @@
     <html>
     <head>
         <link rel="Stylesheet" type="text/css" href="../style.css" />
-        <title>2011-10-27</title>
+        <title>2012-10-08</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     </head>
     <body>
         <div class="content">
         
-
-<h1 id="toc_1">2011-10-27</h1>
-
-<p>
-今天开始学习F#!~<br>
-请看下面这段代码<br>
-</p>
-
-<pre>
-type Expr =
-  | Num of int
-  | Add of Expr + Expr
-  | Mul of Expr * Expr
-  | Var of string
-
-let rec Evaluate (env:Map&lt;string,int&gt;) exp =
-    match exp with
-    | Num n -&gt; n
-    | Add (x,y) -&gt; Evaluate env x + Evaluate env y
-    | Mul (x,y) -&gt; Evaluate env x * Evaluate env y
-    | Var id    -&gt; env.[id]
-</pre>
+<h1 id="toc_1">2012-10-08</h1>
 
 <p>
-看到了吗，一个文法规则外加解释器。。。<br>
-瞬间明白了一些这种函数式递归编程的无限强力啊……<br>
+昨天买了一个Reason Essentials，赶上特价省了两百块。<br />
+所以现在需要攒$2400HKD来升级到Full Version.<br />
+此外，去询问一下信用卡的事情吧。很奇怪已经过了一个月还是没有回应。<br />
 </p>
 
         </div>
