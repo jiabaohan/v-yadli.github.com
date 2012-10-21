@@ -1,0 +1,130 @@
+    <html>
+    <head>
+        <link rel="Stylesheet" type="text/css" href="style.css" />
+        <title>Range</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+        <div class="content">
+        
+<h1 id="toc_1">Range</h1>
+
+<p>
+完整版说明书：
+</p>
+
+<pre>
+
+Line numbers may be specified with:		*:range* *E14* *{address}*
+	{number}	an absolute line number
+	.		the current line			  *:.*
+	$		the last line in the file		  *:$*
+	%		equal to 1,$ (the entire file)		  *:%*
+	't		position of mark t (lowercase)		  *:'*
+	'T		position of mark T (uppercase); when the mark is in
+			another file it cannot be used in a range
+	/{pattern}[/]	the next line where {pattern} matches	  *:/*
+	?{pattern}[?]	the previous line where {pattern} matches *:?*
+	\/		the next line where the previously used search
+			pattern matches
+	\?		the previous line where the previously used search
+			pattern matches
+	\&amp;		the next line where the previously used substitute
+			pattern matches
+
+Each may be followed (several times) by '+' or '-' and an optional number.
+This number is added or subtracted from the preceding line number.  If the
+number is omitted, 1 is used.
+
+The "/" and "?" after {pattern} are required to separate the pattern from
+anything that follows.
+
+The "/" and "?" may be preceded with another address.  The search starts from
+there.  The difference from using ';' is that the cursor isn't moved.
+Examples: &gt;
+	/pat1//pat2/	Find line containing "pat2" after line containing
+			"pat1", without moving the cursor.
+	7;/pat2/	Find line containing "pat2", after line 7, leaving
+			the cursor in line 7.
+
+The {number} must be between 0 and the number of lines in the file.  When
+using a 0 (zero) this is interpreted as a 1 by most commands.  Commands that
+use it as a count do use it as a zero (|:tag|, |:pop|, etc).  Some commands
+interpret the zero as "before the first line" (|:read|, search pattern, etc).
+
+Examples: &gt;
+	.+3		three lines below the cursor
+	/that/+1	the line below the next line containing "that"
+	.,$		from current line until end of file
+	0;/that		the first line containing "that", also matches in the
+			first line.
+	1;/that		the first line after line 1 containing "that"
+
+Some commands allow for a count after the command.  This count is used as the
+number of lines to be used, starting with the line given in the last line
+specifier (the default is the cursor line).  The commands that accept a count
+are the ones that use a range but do not have a file name argument (because
+a file name can also be a number).
+
+Examples: &gt;
+	:s/x/X/g 5	substitute 'x' by 'X' in the current line and four
+			following lines
+	:23d 4		delete lines 23, 24, 25 and 26
+
+
+Folds and Range
+
+When folds are active the line numbers are rounded off to include the whole
+closed fold.  See |fold-behavior|.
+
+
+Reverse Range						*E493*
+
+A range should have the lower line number first.  If this is not the case, Vim
+will ask you if it should swap the line numbers.
+	Backwards range given, OK to swap ~
+This is not done within the global command ":g".
+
+You can use ":silent" before a command to avoid the question, the range will
+always be swapped then.
+
+
+Count and Range						*N:*
+
+When giving a count before entering ":", this is translated into:
+		:.,.+(count - 1)
+In words: The 'count' lines at and after the cursor.  Example: To delete
+three lines: &gt;
+		3:d&lt;CR&gt;		is translated into: .,.+2d&lt;CR&gt;
+&lt;
+
+Visual Mode and Range					*v_:*
+
+{Visual}:	Starts a command-line with the Visual selected lines as a
+		range.  The code ":'&lt;,'&gt;" is used for this range, which makes
+		it possible to select a similar line from the command-line
+		history for repeating a command on different Visually selected
+		lines.
+
+</pre>
+
+        </div>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'yataoblog'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         })();
+     </script>
+     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </body>
+</html>
+
+
