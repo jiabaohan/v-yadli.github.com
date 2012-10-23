@@ -22,6 +22,50 @@ AbstractListModel的派生类）的界面的时候，如果Layout不设置好，
 View会拒绝添加。原理大概是高度不够了拒绝添加。。。
 </p>
 
+<p>
+<a href="http://stackoverflow.com/questions/3559764/only-one-row-of-listview-populated-in-qml-app-any-idea-why">http://stackoverflow.com/questions/3559764/only-one-row-of-listview-populated-in-qml-app-any-idea-why</a>
+</p>
+
+
+<p>
+【坑爹的QFlag】 例如有一个enum叫 Qt::ItemFlag{...}
+那么QFlag的作用是把他们变成形如 Qt::Itemxxx, Qt::Itemyyy的全局量。。
+</p>
+
+<p>
+<a href="http://qt-project.org/doc/qt-4.8/model-view-programming.html#model-subclassing-reference">http://qt-project.org/doc/qt-4.8/model-view-programming.html#model-subclassing-reference</a>
+这个好，讲Qt如何用MVC
+<a href="http://doc.qt.digia.com/4.7-snapshot/qdeclarativemodels.html">http://doc.qt.digia.com/4.7-snapshot/qdeclarativemodels.html</a> QML data model
+第一天掌握了画画的方法
+第二天掌握了states和函数绑定
+第三天掌握了MVC，高级Layout
+接下来要掌握自己实现Component in C++
+第四天太淫荡了。
+</p>
+<ul>
+<li>
+第一发现了属性自动绑定（于是轻松实现了同步滑动功能）
+
+<li>
+第二发现了MVC的C++ model在qmlRegister之后可以通过传指针的方法直接绑到qml view的model属性上
+
+<li>
+第三发现了画C++ widget的方法是轻松实现一个paint函数即可（切记绘画大小要和qml中一样，通过height()和weight()可以获取widget大小
+
+<li>
+第四可以录音了！！！
+
+</ul>
+   
+
+<p>
+这里有资源：<a href="http://www.developer.nokia.com/Community/Wiki/QmlPaint_-_how_to_make_paint_application_with_QML">http://www.developer.nokia.com/Community/Wiki/QmlPaint_-_how_to_make_paint_application_with_QML</a>
+</p>
+
+<p>
+原来在QML中直接写xxx:yyy会把两个属性绑定。yyy变化的时候xxx会自动变化，不需要另外连信号。
+</p>
+
         </div>
         <div id="disqus_thread"></div>
         <script type="text/javascript">
