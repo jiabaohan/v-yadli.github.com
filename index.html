@@ -21,25 +21,9 @@ It's been a long time... Now I'm back again.<br />
 好多事情需要处理。<br />
 </p>
 
-<ol>
-<li>
-Online Application for Student Visa / Entry Permit <a href="https://w5.ab.ust.hk/cgi-bin/std_nem_cgi.sh/WService=broker_af_p/prg/af_vs_appl_main.r">https://w5.ab.ust.hk/cgi-bin/std_nem_cgi.sh/WService=broker_af_p/prg/af_vs_appl_main.r</a>
-
-<li>
-毕业设计
-
-<li>
-SKS
-
-<li>
-Graph generator
-
-</ol>
- 
 <p>
-<a href="Sticky notes.html">Sticky notes</a>
+【堆了半年的TODO List终于给清除了……】
 </p>
-
 
 <p>
 新栏目～<br />
@@ -51,7 +35,7 @@ Graph generator
 <p>
 <a href="Graph generators.html">Graph generators</a><br>
 <a href="Graph databases.html">Graph databases</a><br>
-<a href="C Libraries.html">C Libraries</a><br>
+<a href="C Libraries.html">C/C++ libraries</a><br>
 <a href="CSharp Libraries.html">C# Libraries</a><br>
 <a href="Unix shell.html">Shell相关，Bash, Trinity Shell, 以及Python（这……姑且这样分类吧)</a><br>
 <a href="MapReduce.html">MapReduce</a><br>
@@ -97,7 +81,32 @@ Get a student octopus card!
 
 <h2 id="toc_1.4">var</h2>
 <p>
+<a href="https://reserve.apple.com/HK/zh_HK/reserve/iPhone">https://reserve.apple.com/HK/zh_HK/reserve/iPhone</a>
+</p>
+
+<p>
+【淫荡的C++ Lock】 
+</p>
+<pre>
+class _HWLOCK{
+    public:
+        _HWLOCK()
+        {__locker.Lock();}
+        ~_HWLOCK()
+        {
+            __locker.Unlock();
+        }
+};
+#define HWLOCK _HWLOCK ___lock_var___; 
+void foo(){ 
+    HWLOCK; 
+    //do something ...
+}
+</pre>
+<p>
+<a href="http://www.soundstosample.com/blog/pro-tips/reverb-and-delay-fx">如何创造性地使用Reverb和Delay</a>
 <a href="http://socialsounddesign.com/">Social sound design!!!</a>
+<a href="http://sifi.tumblr.com/">另一个有意思的博客</a>
 <a href="http://blog.bigpixel.ro/">又一个有意思的博客</a>
 <a href="http://www.ridinginshoppingcarts.com/">一个有意思的博客</a>
 <a href="http://soundcloud.com/tracks/search?q[fulltext">http://soundcloud.com/tracks/search?q[fulltext</a>=Acapulco+propellerhead&amp;q[type]=&amp;q[duration]= Reason Rack Extension广告曲，为什么我这么喜欢]
