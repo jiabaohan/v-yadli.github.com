@@ -1,19 +1,25 @@
     <html>
     <head>
         <link rel="Stylesheet" type="text/css" href="style.css" />
-        <title>Graph Visualization Toolkits</title>
+        <title>SwitchToThread or Thread.Yield vs. Thread.Sleep(0) vs. Thead.Sleep(1)</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     </head>
     <body>
         <div class="content">
         
-<h1 id="toc_1">Graph Visualization Toolkits</h1>
+<h1 id="toc_1">SwitchToThread or Thread.Yield vs. Thread.Sleep(0) vs. Thead.Sleep(1)</h1>
 
-<p>
-<a href="GraphStream.html">GraphStream</a><br />
-<a href="Gephi.html">Gephi</a><br />
-<a href="Trinity Graph Explorer.html">Trinity Graph Explorer</a><br />
-</p>
+<ul>
+<li>
+Thread.Yield: Nice, current thread will be thrown into queue
+
+<li>
+Thread.Sleep(0): Spin, if no other active threads, this one will continue to run
+
+<li>
+Thread.Sleep(1): Coarse-grained long sleep. 
+
+</ul>
 
         </div>
         <div id="disqus_thread"></div>

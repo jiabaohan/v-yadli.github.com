@@ -1,18 +1,17 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<link rel="Stylesheet" type="text/css" href="style.css">
-<title>How to logout users on remote servers</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-</head>
-<body>
-
-
+    <html>
+    <head>
+        <link rel="Stylesheet" type="text/css" href="style.css" />
+        <title>How to logout users on remote servers</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+        <div class="content">
+        
 <h1 id="toc_1">How to logout users on remote servers</h1>
 
 <ol>
 <li>
-query session /server:servername -- 这招可以查到ID
+query session /server:servername -- 这招可以查到ID 
 
 <li>
 reset session [ID] /server:servername -- 这招可以踢掉特定ID的人
@@ -21,9 +20,28 @@ reset session [ID] /server:servername -- 这招可以踢掉特定ID的人
 Some use of Trinity Shell is encouraged... :-)
 
 </ol>
+
 <p>
-<a href="http://www.howtogeek.com/howto/windows/command-line-hack-for-terminal-server-has-exceeded-the-maximum-number-of-allowed-connections/">如何远程踢人</a><br>
+<a href="http://www.howtogeek.com/howto/windows/command-line-hack-for-terminal-server-has-exceeded-the-maximum-number-of-allowed-connections/">如何远程踢人</a>
 </p>
 
-</body>
+        </div>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'yataoblog'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         })();
+     </script>
+     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </body>
 </html>
+
+
