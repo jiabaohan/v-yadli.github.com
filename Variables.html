@@ -15,6 +15,7 @@
 变量与寄存器不同。<br />
 在Ex模式，或VimL中，直接使用<br />
 let var_name=value 来保存值到变量。<br />
+2013-01-11：let var_name=system("...")以得到类似管道的效果<br>
 变量的内容可以是：<br />
 </p>
 <ol>
@@ -44,6 +45,14 @@ let var_name=value 来保存值到变量。<br />
 形如l:var_name的是局部变量。在当前Buffer有效。<br />
 形如s:var_name的是Script变量，在当前VimL Script中有效。<br />
 形如g:var_name的是全局变量，你懂的。<br />
+更详细情况参考<a href="http://www.ibm.com/developerworks/linux/library/l-vim-script-1/index.html">http://www.ibm.com/developerworks/linux/library/l-vim-script-1/index.html</a>
+</p>
+
+<h2 id="toc_1.3">RegEx</h2>
+
+<p>
+来源<a href="http://objectmix.com/editors/149997-vim-get-substring-regexp.html">http://objectmix.com/editors/149997-vim-get-substring-regexp.html</a>
+形如 let current_size = matchstr("xxxx",regexp)
 </p>
 
         </div>
